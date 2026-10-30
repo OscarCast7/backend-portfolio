@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oscar Castañeda | Desarrollador Backend C# & .NET</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              500: '#22c55e',
+              600: '#16a34a',
+              900: '#14532d',
+            },
+            dotnet: {
+              purple: '#512bd4',
+              dark: '#1e1b4b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Estilos Personalizados -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen selection:bg-purple-500 selection:text-white">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 w-full bg-slate-900/80 backdrop-blur-md border-b border-slate-800 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center space-x-3">
+          <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-purple-600 to-indigo-500 flex items-center justify-center font-bold text-white shadow-lg shadow-purple-500/20">
+            OC
+          </div>
+          <span class="font-bold text-lg tracking-tight">Oscar Castañeda</span>
+        </div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+          <a href="#about" class="hover:text-purple-400 transition-colors">Sobre mí</a>
+          <a href="#skills" class="hover:text-purple-400 transition-colors">Tecnologías</a>
+          <a href="#projects" class="hover:text-purple-400 transition-colors">Proyectos</a>
+          <a href="#demo" class="hover:text-purple-400 transition-colors">API Interactive</a>
+          <a href="#contact" class="hover:text-purple-400 transition-colors">Contacto</a>
+        </div>
+        <a href="https://github.com/OscarCast7" target="_blank" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 px-4 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-2">
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="about" class="pt-32 pb-20 px-4 max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-semibold uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+          Disponible para Oportunidades IT
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold text-slate-100 tracking-tight leading-tight">
+          Desarrollador Backend <br>
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-indigo-300 to-emerald-400">
+            Especializado en .NET & C#
+          </span>
+        </h1>
+        <p class="text-slate-400 text-lg leading-relaxed max-w-2xl">
+          Apasionado por la construcción de APIs RESTful sólidas, arquitecturas relacionales y código mantenible. Experiencia en .NET 8, Entity Framework Core, autenticación JWT y persistencia en SQLite/SQL Server.
+        </p>
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="#projects" class="bg-purple-600 hover:bg-purple-500 text-white font-semibold px-6 py-3 rounded-lg transition-all shadow-lg shadow-purple-600/25 flex items-center gap-2">
+            <i class="fas fa-code"></i>
+            <span>Ver Proyectos</span>
+          </a>
+          <a href="#contact" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-semibold px-6 py-3 rounded-lg transition-all flex items-center gap-2">
+            <i class="fas fa-envelope"></i>
+            <span>Contactar</span>
+          </a>
+        </div>
+        <div class="flex items-center gap-6 text-sm text-slate-400 pt-4">
+          <div class="flex items-center gap-2">
+            <i class="fas fa-location-dot text-purple-400"></i>
+            <span>Cuenca, España</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-check-circle text-emerald-400"></i>
+            <span>Proyectos Demostrables</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Code Card Visual -->
+      <div class="lg:col-span-5">
+        <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-2xl">
+          <div class="bg-slate-950 px-4 py-3 border-b border-slate-800 flex items-center justify-between">
+            <div class="flex space-x-2">
+              <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+              <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+              <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+            </div>
+            <span class="text-xs font-mono text-slate-400">Program.cs</span>
+          </div>
+          <div class="p-4 text-xs font-mono overflow-x-auto text-slate-300 leading-relaxed">
+            <p><span class="text-purple-400">var</span> builder = WebApplication.CreateBuilder(args);</p>
+            <p class="text-slate-500">// Configuración DbContext & JWT</p>
+            <p>builder.Services.AddDbContext&lt;<span class="text-emerald-400">AppDbContext</span>&gt;(options =&gt;</p>
+            <p class="pl-4">options.UseSqlite(<span class="text-amber-300">"Data Source=tickets.db"</span>));</p>
+            <br>
+            <p>builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme);</p>
+            <p>builder.Services.AddControllers();</p>
+            <br>
+            <p><span class="text-purple-400">var</span> app = builder.Build();</p>
+            <p>app.UseAuthentication();</p>
+            <p>app.UseAuthorization();</p>
+            <p>app.MapControllers();</p>
+            <p><span class="text-purple-400">app</span>.Run();</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-16 bg-slate-900/50 border-y border-slate-800/80">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-12 text-slate-100">Tech Stack & Competencias</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-slate-900 p-5 rounded-xl border border-slate-800 hover:border-purple-500/50 transition-all text-center">
+          <i class="fas fa-code text-3xl text-purple-400 mb-3"></i>
+          <h3 class="font-bold text-slate-200">C# & .NET 8</h3>
+          <p class="text-xs text-slate-400 mt-1">ASP.NET Core Web API</p>
+        </div>
+        <div class="bg-slate-900 p-5 rounded-xl border border-slate-800 hover:border-purple-500/50 transition-all text-center">
+          <i class="fas fa-database text-3xl text-emerald-400 mb-3"></i>
+          <h3 class="font-bold text-slate-200">EF Core & SQLite</h3>
+          <p class="text-xs text-slate-400 mt-1">ORM Code-First & Migraciones</p>
+        </div>
+        <div class="bg-slate-900 p-5 rounded-xl border border-slate-800 hover:border-purple-500/50 transition-all text-center">
+          <i class="fas fa-key text-3xl text-amber-400 mb-3"></i>
+          <h3 class="font-bold text-slate-200">Seguridad & JWT</h3>
+          <p class="text-xs text-slate-400 mt-1">Bearer Tokens & SHA256</p>
+        </div>
+        <div class="bg-slate-900 p-5 rounded-xl border border-slate-800 hover:border-purple-500/50 transition-all text-center">
+          <i class="fas fa-vial text-3xl text-indigo-400 mb-3"></i>
+          <h3 class="font-bold text-slate-200">Swagger UI</h3>
+          <p class="text-xs text-slate-400 mt-1">Documentación & Pruebas API</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 max-w-6xl mx-auto px-4">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="text-3xl font-bold text-slate-100">Proyecto Destacado</h2>
+      <p class="text-slate-400 mt-2">API REST para la gestión de incidencias IT, soporte y usuarios.</p>
+    </div>
+
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 shadow-xl">
+      <div class="lg:col-span-7 p-8 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <span class="px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-semibold">.NET 8</span>
+            <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold">SQLite</span>
+            <span class="px-3 py-1 rounded-full bg-indigo-500/10 text-indigo-400 text-xs font-semibold">JWT</span>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-100 mb-3">System Ticket API Backend</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            API RESTful desarrollada en C# para la administración centralizada de tickets de soporte técnico. Implementa roles de usuario (Admin, Técnico, Usuario), cambio de estados de incidencias y autenticación mediante JWT.
+          </p>
+          <ul class="space-y-2 text-sm text-slate-300 mb-8">
+            <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> Registro e inicio de sesión con hash de contraseña.</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> Endpoints protegidos con atributo [Authorize].</li>
+            <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> Migraciones automatizadas con Entity Framework Core.</li>
+          </ul>
+        </div>
+        <div class="flex gap-4">
+          <a href="https://github.com/OscarCast7/TicketSystem-Backend" target="_blank" class="bg-purple-600 hover:bg-purple-500 text-white font-medium px-5 py-2.5 rounded-lg text-sm transition-all flex items-center gap-2">
+            <i class="fab fa-github"></i> Repositorio GitHub
+          </a>
+        </div>
+      </div>
+      <div class="lg:col-span-5 bg-slate-950 p-6 border-t lg:border-t-0 lg:border-l border-slate-800 flex items-center justify-center">
+        <div class="w-full text-center">
+          <i class="fas fa-server text-6xl text-purple-500/40 mb-4"></i>
+          <h4 class="text-slate-200 font-semibold mb-2">Base de Datos & Arquitectura</h4>
+          <p class="text-xs text-slate-400">
+            `tickets.db` en SQLite con relaciones entre Users, Roles, Categories y Tickets.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive API Demo Simulator -->
+  <section id="demo" class="py-16 bg-slate-900/30 border-t border-slate-800">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl font-bold text-slate-100">Simulador Interactivo de API (Swagger)</h2>
+        <p class="text-slate-400 text-sm mt-1">Prueba los endpoints simulados de la API de Tickets directamente desde aquí.</p>
+      </div>
+
+      <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden shadow-2xl">
+        <div class="bg-slate-950 px-6 py-4 border-b border-slate-800 flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+            <span class="font-mono text-sm text-slate-300 font-semibold">http://localhost:5133/swagger</span>
+          </div>
+          <span id="authStatus" class="text-xs px-2.5 py-1 rounded bg-red-500/10 text-red-400 font-mono">Status: 401 Unauthorized</span>
+        </div>
+
+        <div class="p-6 space-y-4">
+          <!-- Step 1: Login -->
+          <div class="bg-slate-950/60 p-4 rounded-lg border border-slate-800">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-1 bg-emerald-600/20 text-emerald-400 font-mono text-xs font-bold rounded">POST</span>
+              <span class="font-mono text-xs text-slate-400">/api/Auth/login</span>
+            </div>
+            <button onclick="simulateLogin()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-medium py-2 rounded text-xs transition-all">
+              Ejecutar Login y Generar Token JWT
+            </button>
+          </div>
+
+          <!-- Step 2: Get Tickets -->
+          <div class="bg-slate-950/60 p-4 rounded-lg border border-slate-800">
+            <div class="flex items-center justify-between mb-3">
+              <span class="px-2.5 py-1 bg-blue-600/20 text-blue-400 font-mono text-xs font-bold rounded">GET</span>
+              <span class="font-mono text-xs text-slate-400">/api/Tickets</span>
+            </div>
+            <button onclick="simulateGetTickets()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium py-2 rounded text-xs transition-all">
+              Consultar Tickets Protegidos
+            </button>
+          </div>
+
+          <!-- Console Output -->
+          <div class="bg-slate-950 p-4 rounded-lg border border-slate-800 font-mono text-xs">
+            <div class="text-slate-500 mb-2">// Response Output</div>
+            <pre id="apiConsole" class="text-emerald-400 overflow-x-auto">Pulse un botón para probar la petición HTTP...</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 max-w-2xl mx-auto px-4">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold text-slate-100 mb-2">¿Hablamos de Proyectos u Ofertas?</h2>
+      <p class="text-slate-400 text-sm">
+        Estoy buscando incorporarme a un equipo de desarrollo Backend en .NET. ¡Envíame un mensaje directo!
+      </p>
+    </div>
+
+    <form action="https://formspree.io/f/oscarcastaeda41@gmail.com" method="POST" class="bg-slate-900 p-6 sm:p-8 rounded-xl border border-slate-800 space-y-4 shadow-xl">
+      <div>
+        <label class="block text-xs font-medium text-slate-300 mb-1">Tu Nombre</label>
+        <input type="text" name="name" required placeholder="Ej. Juan Pérez" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-slate-100 focus:outline-none focus:border-purple-500 transition-colors">
+      </div>
+
+      <div>
+        <label class="block text-xs font-medium text-slate-300 mb-1">Tu Correo Electrónico</label>
+        <input type="email" name="email" required placeholder="tuemail@ejemplo.com" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-slate-100 focus:outline-none focus:border-purple-500 transition-colors">
+      </div>
+
+      <div>
+        <label class="block text-xs font-medium text-slate-300 mb-1">Mensaje</label>
+        <textarea name="message" rows="4" required placeholder="Escribe aquí tu mensaje o propuesta laboral..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2.5 text-sm text-slate-100 focus:outline-none focus:border-purple-500 transition-colors"></textarea>
+      </div>
+
+      <button type="submit" class="w-full bg-purple-600 hover:bg-purple-500 text-white font-semibold py-3 rounded-lg text-sm transition-all flex items-center justify-center gap-2 shadow-lg shadow-purple-600/25">
+        <i class="fas fa-paper-plane"></i>
+        <span>Enviar Mensaje</span>
+      </button>
+    </form>
+
+    <div class="mt-8 text-center">
+      <a href="https://linkedin.com/in/oscar-castañeda-36632122b/" target="_blank" class="inline-flex items-center gap-2 text-slate-400 hover:text-purple-400 text-sm transition-colors">
+        <i class="fab fa-linkedin text-lg"></i>
+        <span>O si lo prefieres, escríbeme por LinkedIn</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t border-slate-800 text-center text-slate-500 text-xs">
+    <p>© 2026 Oscar Castañeda — Desarrollador Backend C# / .NET</p>
+  </footer>
+
+  <!-- Lógica JavaScript en archivo externo -->
+  <script src="/Portfolio/assets/js/script.js"></script>
+</body>
+</html>
