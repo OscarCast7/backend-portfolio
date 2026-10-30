@@ -203,6 +203,42 @@
     </div>
   </section>
 
+  <!-- Proyecto 2: GestSystem API -->
+<div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 shadow-xl mt-8">
+  <div class="lg:col-span-7 p-8 flex flex-col justify-between">
+    <div>
+      <div class="flex items-center gap-3 mb-4">
+        <span class="px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-semibold">.NET 8</span>
+        <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold">SQLite</span>
+        <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 text-xs font-semibold">LINQ Queries</span>
+      </div>
+      <h3 class="text-2xl font-bold text-slate-100 mb-3">Inventory & Stock Alert API</h3>
+      <p class="text-slate-400 text-sm leading-relaxed mb-6">
+        API RESTful para el control automatizado de inventarios y alertas preventivas de reabastecimiento. Implementa consultas optimizadas con LINQ y arquitectura limpia basada en DTOs.
+      </p>
+      <ul class="space-y-2 text-sm text-slate-300 mb-8">
+        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> Búsqueda avanzada y filtrado dinámico por categoría o stock.</li>
+        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> Endpoint optimizado para alertas de stock crítico (`/low-stock`).</li>
+        <li class="flex items-center gap-2"><i class="fas fa-check text-emerald-400"></i> Modelo relacional con categorías y códigos SKU únicos.</li>
+      </ul>
+    </div>
+    <div class="flex gap-4">
+      <a href="https://github.com/OscarCast7/GestSystem-Backend.git" target="_blank" class="bg-purple-600 hover:bg-purple-500 text-white font-medium px-5 py-2.5 rounded-lg text-sm transition-all flex items-center gap-2">
+        <i class="fab fa-github"></i> Repositorio GitHub
+      </a>
+    </div>
+  </div>
+  <div class="lg:col-span-5 bg-slate-950 p-6 border-t lg:border-t-0 lg:border-l border-slate-800 flex items-center justify-center">
+    <div class="w-full text-center">
+      <i class="fas fa-boxes-stacked text-6xl text-emerald-500/40 mb-4"></i>
+      <h4 class="text-slate-200 font-semibold mb-2">Control de Stock en Tiempo Real</h4>
+      <p class="text-xs text-slate-400">
+        Persistencia con EF Core Code-First y `inventory.db` en SQLite.
+      </p>
+    </div>
+  </div>
+</div>
+
   <!-- Interactive API Demo Simulator -->
   <section id="demo" class="py-16 bg-slate-900/30 border-t border-slate-800">
     <div class="max-w-4xl mx-auto px-4">
